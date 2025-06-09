@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nagamalla Sathwik - Portfolio</title>
+    <meta name="description" content="Professional portfolio of Nagamalla Sathwik - Computer Science Engineering student with expertise in Java, Python, Linux, and MySQL">
+    <meta name="keywords" content="Portfolio, Web Developer, Software Engineer, Java, Python, Linux">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-circle"></div>
+            <div class="preloader-circle"></div>
+            <div class="preloader-circle"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- 3D Background -->
+    <div id="canvas-container"></div>
+    <div id="particle-canvas"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">Nagamalla Sathwik</div>
+                <nav class="nav">
+                    <span class="close-btn">&times;</span>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#certificates">Certificates</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#activities">Activities</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-subtitle">Computer Science Engineer</div>
+                <h1 class="hero-title">Hi, I'm <span>Nagamalla Sathwik</span></h1>
+                <p class="hero-description">
+                    Driven and eager to take on new challenges, with a strong ability to work independently and rapidly
+                    learn new skills. Equipped with a good foundation in Information Technology and a drive to exceed
+                    expectations.
+                </p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn">Hire Me</a>
+                    <a href="#projects" class="btn secondary-btn">View Projects</a>
+                </div>
+                <div class="scroll-indicator">
+                    <p>Scroll down to explore</p>
+                    <div class="mouse-scroll">
+                        <div class="mouse">
+                            <div class="mouse-wheel"></div>
+                        </div>
+                        <div class="scroll-arrows">
+                            <span class="scroll-arrow"></span>
+                            <span class="scroll-arrow"></span>
+                            <span class="scroll-arrow"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-img">
+                <img src="https://public.youware.com/users-website-assets/prod/9edc0805-c1ff-4512-a484-94b30177b09f/g6dcd339a468ba58d38adeed2ee3372c97b6f3366a7f5fa5c868e94db1719e7da91d0fd2a806d3fa6729334a2cd0b973bc3618d866576152086c5683557bcc872_1280.jpg" alt="Developer">
+            </div>
+        </div>
+        
+        <!-- Animated Shapes -->
+        <div class="hero-shape shape-1"></div>
+        <div class="hero-shape shape-2"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>About Me</h2>
+                <p>Get to know more about my background, skills, and passion for technology</p>
+            </div>
+            
+            <div class="about-inner">
+                <div class="about-img fade-right">
+                    <img src="https://public.youware.com/users-website-assets/prod/9edc0805-c1ff-4512-a484-94b30177b09f/gc26f3426a4f82682ccd2baa3403d4a4a72ee97a8aa502b84d83d2a098a726d0e3ae7e86afa81875679e5a30333baf58465c9ecc87993efbc87c20447283a2cb5_1280.jpg" alt="About Me">
+                </div>
+                
+                <div class="about-content fade-left">
+                    <h3 class="about-title">I'm a Computer Science Engineering Student</h3>
+                    <p class="about-description">
+                        Currently pursuing B.Tech in Computer Science & Engineering at Anurag University with a CGPA of 8.35/10. 
+                        I'm passionate about developing innovative software solutions and exploring technologies like 
+                        Machine Learning, Java, and Web Development. My goal is to contribute to organizational success
+                        while continually enhancing my capabilities.
+                    </p>
+                    
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span><strong>Location:</strong> Siddipet, Telangana</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span><strong>Degree:</strong> B.Tech CSE (2021-2025)</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-trophy"></i>
+                            <span><strong>CGPA:</strong> 8.35/10</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <span><strong>Position:</strong> Technical Lead, Cyber Troopers</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>Skills & Expertise</h2>
+                <p>Here are the technologies and tools I work with</p>
+            </div>
+            
+            <div class="skills-inner">
+                <div class="fade-right">
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Java Programming</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-percent="85"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Python Development</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-percent="80"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Web Development (HTML/CSS)</span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-percent="75"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">MySQL Database</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-percent="80"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Linux</span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-percent="75"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">C Programming</span>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill-progress">
+                            <div class="skill-progress-bar" data-percent="70"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-icon-grid fade-left">
+                    <div class="skill-icon-item stagger-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <div class="skill-icon-name">Java</div>
+                    </div>
+                    
+                    <div class="skill-icon-item stagger-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="skill-icon-name">Python</div>
+                    </div>
+                    
+                    <div class="skill-icon-item stagger-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <div class="skill-icon-name">HTML</div>
+                    </div>
+                    
+                    <div class="skill-icon-item stagger-item">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="skill-icon-name">MySQL</div>
+                    </div>
+                    
+                    <div class="skill-icon-item stagger-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-linux"></i>
+                        </div>
+                        <div class="skill-icon-name">Linux</div>
+                    </div>
+                    
+                    <div class="skill-icon-item stagger-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-windows"></i>
+                        </div>
+                        <div class="skill-icon-name">Windows</div>
+                    </div>
+                    
+                    <div class="skill-icon-item stagger-item">
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="skill-icon-name">C</div>
+                    </div>
+                    
+                    <div class="skill-icon-item stagger-item">
+                        <div class="skill-icon">
+                            <i class="fab fa-css3"></i>
+                        </div>
+                        <div class="skill-icon-name">CSS</div>
+                    </div>
+                    
+                    <div class="skill-icon-item stagger-item">
+                        <div class="skill-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="skill-icon-name">CCNA</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>My Projects</h2>
+                <p>Here are some of the projects I've worked on recently</p>
+            </div>
+            
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                <button class="filter-btn" data-filter="security">Cybersecurity</button>
+                <button class="filter-btn" data-filter="database">Database</button>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-item stagger-item" data-category="web">
+                    <div class="project-img">
+                        <img src="https://public.youware.com/users-website-assets/prod/9edc0805-c1ff-4512-a484-94b30177b09f/g08d93a647ba8b6c7cb445842db56f112688481d3899c9b7acbfbc8ed7f602ae860af796c7b67e547ccc1acf5ec90bb50715414a21326624cfb11885245345564_1280.jpg" alt="SIH Project">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Web Development</span>
+                        <h3 class="project-title">Educational Web Application</h3>
+                        <p class="project-description">
+                            Developed a web application designed to improve the quality of education in rural areas. 
+                            This application engages users by allowing them to earn coins as they study, thereby making
+                            learning more attractive. (SIH Project)
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item stagger-item" data-category="ml">
+                    <div class="project-img">
+                        <img src="https://public.youware.com/users-website-assets/prod/9edc0805-c1ff-4512-a484-94b30177b09f/g4379ba68f0f7d2b36834dc525902bfab702c0757f648bcc00acbb13bddf7dabf9901f5b6d90c32290da3cc37e44274535c8b28612544b89f95af7ccc2f3e5c6e_1280.jpg" alt="Intrusion Detection System">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Machine Learning</span>
+                        <h3 class="project-title">Intrusion Detection System</h3>
+                        <p class="project-description">
+                            Developed an LSTM-based intrusion detection system in Python using the UNSW-NB15 dataset, 
+                            achieving 87% accuracy for real-time threat classification.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item stagger-item" data-category="security">
+                    <div class="project-img">
+                        <img src="https://public.youware.com/users-website-assets/prod/9edc0805-c1ff-4512-a484-94b30177b09f/gc26f3426a4f82682ccd2baa3403d4a4a72ee97a8aa502b84d83d2a098a726d0e3ae7e86afa81875679e5a30333baf58465c9ecc87993efbc87c20447283a2cb5_1280.jpg" alt="Network Assessment Tool">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Cybersecurity</span>
+                        <h3 class="project-title">Network Assessment Tool</h3>
+                        <p class="project-description">
+                            Built a tool to analyze network security by gathering domain information through Whois lookups 
+                            and identifying potential vulnerabilities using Nmap scans, helping users assess and improve 
+                            their network security posture.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item stagger-item" data-category="database">
+                    <div class="project-img">
+                        <img src="https://public.youware.com/users-website-assets/prod/9edc0805-c1ff-4512-a484-94b30177b09f/g6dcd339a468ba58d38adeed2ee3372c97b6f3366a7f5fa5c868e94db1719e7da91d0fd2a806d3fa6729334a2cd0b973bc3618d866576152086c5683557bcc872_1280.jpg" alt="Bank Management System">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Database Systems</span>
+                        <h3 class="project-title">Bank Management System</h3>
+                        <p class="project-description">
+                            This DBMS-based system automates banking operations, enabling secure transactions, 
+                            efficient account management, and easy access to banking services with reliable data 
+                            storage and retrieval.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item stagger-item" data-category="database">
+                    <div class="project-img">
+                        <img src="https://public.youware.com/users-website-assets/prod/9edc0805-c1ff-4512-a484-94b30177b09f/g08d93a647ba8b6c7cb445842db56f112688481d3899c9b7acbfbc8ed7f602ae860af796c7b67e547ccc1acf5ec90bb50715414a21326624cfb11885245345564_1280.jpg" alt="Lab Management System">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-category">Java & Database</span>
+                        <h3 class="project-title">Lab Management System</h3>
+                        <p class="project-description">
+                            Developed a Lab Management System using Java and JDBC to manage lab resources. 
+                            Integrated MySQL for data storage, enabling equipment tracking, scheduling, and 
+                            user management with robust error handling.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>Certificates & Achievements</h2>
+                <p>Professional certifications and technical skills development</p>
+            </div>
+            
+            <div class="certificates-grid">
+                <div class="certificate-item stagger-item">
+                    <div class="certificate-content">
+                        <div class="certificate-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="certificate-title">Programming Fundamentals</h3>
+                        <span class="certificate-issuer">Duke University (Coursera)</span>
+                        <span class="certificate-date">2023</span>
+                        <p>Learned programming fundamentals and core concepts of software development.</p>
+                    </div>
+                </div>
+                
+                <div class="certificate-item stagger-item">
+                    <div class="certificate-content">
+                        <div class="certificate-icon">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <h3 class="certificate-title">Java Full Stack</h3>
+                        <span class="certificate-issuer">TalentNext (Wipro)</span>
+                        <span class="certificate-date">2023</span>
+                        <p>Comprehensive Java full stack development training program from Wipro.</p>
+                    </div>
+                </div>
+                
+                <div class="certificate-item stagger-item">
+                    <div class="certificate-content">
+                        <div class="certificate-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="certificate-title">Introduction to Cyber Security</h3>
+                        <span class="certificate-issuer">Infosys Springboard</span>
+                        <span class="certificate-date">2023</span>
+                        <p>Learned fundamentals of cybersecurity, including threats and defense mechanisms.</p>
+                    </div>
+                </div>
+                
+                <div class="certificate-item stagger-item">
+                    <div class="certificate-content">
+                        <div class="certificate-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3 class="certificate-title">Cybersecurity Virtual Internship</h3>
+                        <span class="certificate-issuer">Palo Alto Networks</span>
+                        <span class="certificate-date">2023</span>
+                        <p>Hands-on experience with enterprise-grade cybersecurity tools and practices.</p>
+                    </div>
+                </div>
+                
+                <div class="certificate-item stagger-item">
+                    <div class="certificate-content">
+                        <div class="certificate-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 class="certificate-title">MongoDB with Python</h3>
+                        <span class="certificate-issuer">Infosys Springboard</span>
+                        <span class="certificate-date">2023</span>
+                        <p>Developed skills in MongoDB database integration with Python applications.</p>
+                    </div>
+                </div>
+                
+                <div class="certificate-item stagger-item">
+                    <div class="certificate-content">
+                        <div class="certificate-icon">
+                            <i class="fab fa-linux"></i>
+                        </div>
+                        <h3 class="certificate-title">NDG Linux Unhatched</h3>
+                        <span class="certificate-issuer">Cisco Networking Academy</span>
+                        <span class="certificate-date">2023</span>
+                        <p>Introduction to Linux operating system fundamentals and command-line operations.</p>
+                    </div>
+                </div>
+                
+                <div class="certificate-item stagger-item">
+                    <div class="certificate-content">
+                        <div class="certificate-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3 class="certificate-title">CCNA</h3>
+                        <span class="certificate-issuer">Cisco</span>
+                        <span class="certificate-date">2023</span>
+                        <p>Cisco Certified Network Associate certification for networking fundamentals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>Education</h2>
+                <p>My academic journey and achievements</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item fade-right">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2021 - 2025</span>
+                        <h3 class="timeline-title">B.Tech - Computer Science & Engineering</h3>
+                        <span class="timeline-location">Anurag University, Hyderabad</span>
+                        <p class="timeline-description">
+                            Currently pursuing Bachelor of Technology in Computer Science & Engineering with a CGPA of 8.35/10. 
+                            Specializing in software development and cybersecurity.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item fade-left">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2019 - 2021</span>
+                        <h3 class="timeline-title">Intermediate (12th Grade)</h3>
+                        <span class="timeline-location">Narayana Junior College, Hyderabad</span>
+                        <p class="timeline-description">
+                            Completed intermediate education with Mathematics, Physics, and Chemistry (MPC) stream with 95.4%. 
+                            Developed strong analytical and problem-solving skills.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item fade-right">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2019</span>
+                        <h3 class="timeline-title">Secondary School (10th Grade)</h3>
+                        <span class="timeline-location">Dr. KKR's Gowtham School, Hyderabad</span>
+                        <p class="timeline-description">
+                            Completed secondary education with 9.0 CGPA. Actively participated in science exhibitions 
+                            and technical competitions, which sparked my interest in technology.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" class="experience">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>Activities & Leadership</h2>
+                <p>Extracurricular activities and leadership roles</p>
+            </div>
+            
+            <div class="experience-inner">
+                <div class="experience-item fade-up">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-company">Cyber Troopers Club</h3>
+                            <h4 class="experience-position">Technical Lead</h4>
+                        </div>
+                        <span class="experience-duration">2022 - Present</span>
+                    </div>
+                    <p class="experience-description">
+                        Served as Technical Lead for the Cyber Troopers club, organizing technical workshops,
+                        mentoring junior members, and leading cybersecurity initiatives.
+                    </p>
+                    <ul class="experience-tasks">
+                        <li>Organized technical workshops on cybersecurity fundamentals</li>
+                        <li>Led team projects and collaborative security research initiatives</li>
+                        <li>Mentored junior students in cybersecurity and programming</li>
+                        <li>Helped plan and execute club activities and events</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item fade-up">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-company">Class Representative</h3>
+                            <h4 class="experience-position">Student Leadership Role</h4>
+                        </div>
+                        <span class="experience-duration">2022 - 2023</span>
+                    </div>
+                    <p class="experience-description">
+                        Served as Class Representative for 2 semesters, acting as a liaison between students and faculty,
+                        organizing academic activities, and representing student concerns.
+                    </p>
+                    <ul class="experience-tasks">
+                        <li>Coordinated communication between students and faculty</li>
+                        <li>Organized study groups and academic support sessions</li>
+                        <li>Represented student concerns to department administration</li>
+                        <li>Helped plan and coordinate class events and activities</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title fade-up">
+                <h2>Get In Touch</h2>
+                <p>Let's discuss your project or opportunities for collaboration</p>
+            </div>
+            
+            <div class="contact-inner">
+                <div class="fade-right">
+                    <div class="contact-info">
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-info-content">
+                                <h4>Location</h4>
+                                <p>H.No: 1-39/A, Shankar Nagar<br>Siddipet, Telangana<br>India - 502103</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-info-content">
+                                <h4>Phone</h4>
+                                <a href="tel:+919849385513">+91-9849385513</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-info-content">
+                                <h4>Email</h4>
+                                <a href="mailto:nagamallasathwik17@gmail.com">nagamallasathwik17@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="contact-info-content">
+                                <h4>LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/nagamalla-sathwik-2a9459267/" target="_blank">nagamalla-sathwik-2a9459267</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-left">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn" id="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">Nagamalla Sathwik</div>
+            
+            <div class="footer-social">
+                <a href="https://github.com" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/nagamalla-sathwik-2a9459267/" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="mailto:nagamallasathwik17@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            
+            <div class="footer-links">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            
+            <p class="footer-copy">
+                © 2024 Nagamalla Sathwik. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="script.js"></script>
+    <script src="three-scroll.js"></script>
+</body>
+</html>
