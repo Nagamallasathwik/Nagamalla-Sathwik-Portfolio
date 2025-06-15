@@ -265,6 +265,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Create floating bubbles background
+  createFloatingBubbles();
+
   // Force initial animations to show content
   setTimeout(() => {
     // Make hero elements visible by default in case animations fail
@@ -293,6 +296,77 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }, 1000);
 });
+
+// Create floating bubbles background
+function createFloatingBubbles() {
+  const colors = [
+    "#16a34a", // green
+    "#0ea5e9", // blue
+    "#8b5cf6", // purple
+    "#f59e0b", // amber
+    "#ec4899", // pink
+  ];
+
+  const container = document.createElement("div");
+  container.className = "floating-bubbles";
+  document.body.appendChild(container);
+
+  // Create 15 bubbles
+  for (let i = 0; i < 15; i++) {
+    const bubble = document.createElement("div");
+    bubble.className = "bubble";
+
+    // Random size between 30px and 150px
+    const size = Math.floor(Math.random() * 120) + 30;
+    bubble.style.width = `${size}px`;
+    bubble.style.height = `${size}px`;
+
+    // Random position
+    bubble.style.left = `${Math.random() * 100}%`;
+    bubble.style.top = `${Math.random() * 100}%`;
+
+    // Random color
+    const colorIndex = Math.floor(Math.random() * colors.length);
+    bubble.style.backgroundColor = colors[colorIndex];
+
+    // Random opacity between 0.05 and 0.15
+    bubble.style.opacity = (Math.random() * 0.1 + 0.05).toString();
+
+    // Random animation duration between 15s and 30s
+    const duration = Math.random() * 15 + 15;
+    bubble.style.animationDuration = `${duration}s`;
+
+    // Random animation delay
+    bubble.style.animationDelay = `${Math.random() * 5}s`;
+
+    // Add shape variation
+    const shapeType = Math.floor(Math.random() * 5);
+    if (shapeType === 0) {
+      // Circle (default)
+    } else if (shapeType === 1) {
+      // Square
+      bubble.style.borderRadius = "10%";
+    } else if (shapeType === 2) {
+      // Triangle (using clip-path)
+      bubble.style.clipPath = "polygon(50% 0%, 0% 100%, 100% 100%)";
+      bubble.style.borderRadius = "0";
+    } else if (shapeType === 3) {
+      // Pentagon
+      bubble.style.clipPath =
+        "polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)";
+      bubble.style.borderRadius = "0";
+    } else {
+      // Blob shape
+      const r1 = 50 + Math.random() * 20;
+      const r2 = 50 + Math.random() * 20;
+      const r3 = 50 + Math.random() * 20;
+      const r4 = 50 + Math.random() * 20;
+      bubble.style.borderRadius = `${r1}% ${r2}% ${r3}% ${r4}% / ${r4}% ${r1}% ${r2}% ${r3}%`;
+    }
+
+    container.appendChild(bubble);
+  }
+}
 
 // Hero Animations with GSAP
 function animateHero() {
@@ -353,7 +427,7 @@ function animateHero() {
   }
 }
 
-// Three.js Background with light colors
+// Three.js Background with enhanced geometric shapes
 function initThreeScene() {
   if (typeof THREE === "undefined") {
     console.error("Three.js is not loaded");
@@ -377,43 +451,91 @@ function initThreeScene() {
   renderer.setPixelRatio(window.devicePixelRatio);
   container.appendChild(renderer.domElement);
 
-  // Add objects to the scene
-  const geometry = new THREE.IcosahedronGeometry(1, 0);
-  const material = new THREE.MeshPhongMaterial({
-    color: 0x16a34a, // Using the primary green color
-    wireframe: true,
-    transparent: true,
-    opacity: 0.3,
-  });
-
-  // Create a group of meshes
+  // Create a group to hold all objects
   const group = new THREE.Group();
   scene.add(group);
 
-  // Create multiple shapes
-  for (let i = 0; i < 15; i++) {
-    const mesh = new THREE.Mesh(geometry, material.clone());
+  // Create multiple varied geometry types
+  const geometries = [
+    new THREE.IcosahedronGeometry(1, 0),
+    new THREE.TetrahedronGeometry(1, 0),
+    new THREE.OctahedronGeometry(1, 0),
+    new THREE.DodecahedronGeometry(1, 0),
+    new THREE.BoxGeometry(1, 1, 1),
+    new THREE.TorusGeometry(1, 0.3, 8, 12),
+    new THREE.ConeGeometry(1, 2, 8),
+  ];
+
+  // Create multiple shapes with different colors
+  for (let i = 0; i < 25; i++) {
+    // Pick a random geometry
+    const geometryIndex = Math.floor(Math.random() * geometries.length);
+    const geometry = geometries[geometryIndex];
+
+    // Create material with a random color
+    let color;
+    const colorChoice = Math.floor(Math.random() * 5);
+
+    switch (colorChoice) {
+      case 0:
+        color = 0x16a34a;
+        break; // green
+      case 1:
+        color = 0x0ea5e9;
+        break; // blue
+      case 2:
+        color = 0x8b5cf6;
+        break; // purple
+      case 3:
+        color = 0xf59e0b;
+        break; // amber
+      case 4:
+        color = 0xec4899;
+        break; // pink
+    }
+
+    const material = new THREE.MeshPhongMaterial({
+      color: color,
+      wireframe: true,
+      transparent: true,
+      opacity: 0.4,
+      emissive: color,
+      emissiveIntensity: 0.2,
+    });
+
+    const mesh = new THREE.Mesh(geometry, material);
+
+    // Position randomly
     mesh.position.set(
-      (Math.random() - 0.5) * 10,
-      (Math.random() - 0.5) * 10,
-      (Math.random() - 0.5) * 10
+      (Math.random() - 0.5) * 20,
+      (Math.random() - 0.5) * 20,
+      (Math.random() - 0.5) * 20
     );
+
+    // Random rotation
     mesh.rotation.set(
       Math.random() * Math.PI,
       Math.random() * Math.PI,
       Math.random() * Math.PI
     );
-    const size = Math.random() * 0.8 + 0.1;
+
+    // Random scale
+    const size = Math.random() * 1.5 + 0.5;
     mesh.scale.set(size, size, size);
 
-    // Use different colors for variety
-    if (i % 3 === 0) {
-      mesh.material.color.setHex(0x16a34a); // Primary green
-    } else if (i % 3 === 1) {
-      mesh.material.color.setHex(0x0ea5e9); // Secondary blue
-    } else {
-      mesh.material.color.setHex(0x8b5cf6); // Accent purple
-    }
+    // Store animation properties
+    mesh.userData = {
+      rotationSpeed: {
+        x: (Math.random() - 0.5) * 0.01,
+        y: (Math.random() - 0.5) * 0.01,
+        z: (Math.random() - 0.5) * 0.01,
+      },
+      oscillation: {
+        speed: 0.01 + Math.random() * 0.02,
+        amplitude: 0.1 + Math.random() * 0.3,
+        phase: Math.random() * Math.PI * 2,
+      },
+    };
 
     group.add(mesh);
   }
@@ -422,25 +544,55 @@ function initThreeScene() {
   const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
   scene.add(ambientLight);
 
-  const pointLight = new THREE.PointLight(0xffffff, 0.5);
+  const pointLight = new THREE.PointLight(0xffffff, 0.7);
   pointLight.position.set(5, 3, 5);
   scene.add(pointLight);
 
   // Position camera
-  camera.position.z = 5;
+  camera.position.z = 10;
+
+  // Add mouse interaction
+  let mouseX = 0,
+    mouseY = 0;
+  let targetMouseX = 0,
+    targetMouseY = 0;
+
+  document.addEventListener("mousemove", function (e) {
+    targetMouseX = (e.clientX - window.innerWidth / 2) * 0.001;
+    targetMouseY = (e.clientY - window.innerHeight / 2) * 0.001;
+  });
 
   // Animation loop
   function animate() {
     requestAnimationFrame(animate);
 
-    group.rotation.x += 0.0005;
-    group.rotation.y += 0.001;
+    // Smooth camera movement following mouse
+    mouseX += (targetMouseX - mouseX) * 0.05;
+    mouseY += (targetMouseY - mouseY) * 0.05;
 
-    // Rotate each mesh
+    camera.position.x += mouseX;
+    camera.position.y += -mouseY;
+    camera.lookAt(scene.position);
+
+    // Animate each shape
     group.children.forEach((mesh) => {
-      mesh.rotation.x += 0.005;
-      mesh.rotation.y += 0.005;
+      // Rotate
+      mesh.rotation.x += mesh.userData.rotationSpeed.x;
+      mesh.rotation.y += mesh.userData.rotationSpeed.y;
+      mesh.rotation.z += mesh.userData.rotationSpeed.z;
+
+      // Oscillate
+      const time = Date.now() * 0.001;
+      const osc = mesh.userData.oscillation;
+      mesh.position.x +=
+        Math.sin(time * osc.speed + osc.phase) * osc.amplitude * 0.1;
+      mesh.position.y +=
+        Math.cos(time * osc.speed + osc.phase) * osc.amplitude * 0.1;
     });
+
+    // Slowly rotate the entire group
+    group.rotation.x += 0.0005;
+    group.rotation.y += 0.0007;
 
     renderer.render(scene, camera);
   }
